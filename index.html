@@ -4,108 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divya Bongouni | Senior Data Integration Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bmw-innovation-blue: #0066B3;
-            --premium-silver: #C0C0C0;
-            --dynamic-red: #CC0000;
-            --carbon-black: #1A1A1A;
-            --tech-grey: #4D4D4D;
+            --informatica-blue: #00549F;
+            --informatica-light-blue: #E5F1F9;
+            --informatica-orange: #FF6A13;
+            --informatica-grey: #4A4A4A;
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: var(--carbon-black);
-            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #F8F9FC 0%, #E5F1F9 100%);
+            color: var(--informatica-grey);
+            line-height: 1.6;
         }
 
-        .hero-section {
-            background: linear-gradient(135deg, var(--bmw-innovation-blue) 0%, var(--tech-grey) 100%);
-            padding: 4rem 0;
+        .header {
+            background: var(--informatica-blue);
+            color: white;
+            padding: 3rem 0;
             text-align: center;
-            border-bottom: 3px solid var(--dynamic-red);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .project-card {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid var(--premium-silver);
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-card {
+            background: white;
             border-radius: 8px;
             padding: 2rem;
             margin: 2rem 0;
-            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #E5E5E5;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,102,179,0.3);
+        .project-card {
+            border-left: 4px solid var(--informatica-orange);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            background: #FFF;
+        }
+
+        .skill-pill {
+            display: inline-block;
+            background: var(--informatica-light-blue);
+            color: var(--informatica-blue);
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #DDD;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button {
+            background: var(--informatica-blue);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: var(--informatica-orange);
+        }
+
+        .tech-blog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #EEE;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>Divya Bongouni</h1>
-        <h2>Senior Data Integration Specialist</h2>
-        <p>Driving Digital Transformation through Cloud Data Modernization</p>
-    </section>
+    <header class="header">
+        <div class="container">
+            <h1>Divya Bongouni</h1>
+            <h2>Senior Data Integration Specialist</h2>
+            <p>12+ Years Experience in Cloud Data Modernization & Enterprise Integration</p>
+        </div>
+    </header>
 
-    <!-- Project Section -->
+    <!-- Projects Section -->
     <section class="container">
-        <!-- Crayon Project -->
-        <div class="project-card">
-            <h3 style="color: var(--dynamic-red)">Crayon Deutschland GmbH</h3>
-            <h4>Informatica CDI-PC Modernization Project</h4>
-            <ul>
-                <li>Modernized legacy PowerCenter workflows to cloud-native Informatica IDMC</li>
-                <li>Migrated Oracle ERP data to Snowflake ODS with 40% performance improvement:cite[1]</li>
-                <li>Implemented real-time data validation framework using Python & SQL</li>
-                <li>Technologies: Informatica IDMC, Oracle 19c, Snowflake, Azure Data Factory</li>
-            </ul>
-        </div>
+        <div class="section-card">
+            <h2 style="color: var(--informatica-blue)">Key Projects</h2>
+            
+            <div class="project-card">
+                <h3>Crayon Deutschland GmbH</h3>
+                <p><em>Informatica CDI-PC Modernization</em></p>
+                <ul>
+                    <li>Migrated Oracle ERP to Snowflake ODS using Informatica IDMC</li>
+                    <li>Implemented CDC for real-time data synchronization</li>
+                    <li>Optimized ETL workflows reducing runtime by 40%</li>
+                </ul>
+                <div class="skill-pill">Informatica IDMC</div>
+                <div class="skill-pill">Snowflake</div>
+                <div class="skill-pill">Oracle 19c</div>
+            </div>
 
-        <!-- Dell Client Project -->
-        <div class="project-card">
-            <h3 style="color: var(--premium-silver)">Dell Supply Chain Analytics (UST Global)</h3>
-            <h4>Supply Chain Workflow Automation</h4>
-            <ul>
-                <li>Designed ETL pipelines for global supply chain data using Informatica Cloud</li>
-                <li>Integrated Oracle EBS with Snowflake data lake handling 5TB daily:cite[2]:cite[5]</li>
-                <li>Developed predictive analytics models for inventory optimization</li>
-                <li>Technologies: Informatica Cloud, Oracle EBS, Snowflake, Power BI</li>
-            </ul>
-        </div>
+            <div class="project-card">
+                <h3>Dell Supply Chain Analytics (UST Global)</h3>
+                <p><em>Supply Chain Workflow Automation</em></p>
+                <ul>
+                    <li>Built Informatica Cloud workflows integrating 15+ data sources</li>
+                    <li>Developed predictive inventory models using Python ML</li>
+                    <li>Created real-time dashboards in Power BI</li>
+                </ul>
+                <div class="skill-pill">Informatica Cloud</div>
+                <div class="skill-pill">Oracle EBS</div>
+                <div class="skill-pill">Apache Spark</div>
+            </div>
 
-        <!-- Cisco Financial Services Project -->
-        <div class="project-card">
-            <h3 style="color: var(--bmw-innovation-blue)">Cisco Financial Analytics (TechMahindra)</h3>
-            <h4>Fair Value Market & Gray Market Analysis</h4>
-            <ul>
-                <li>Integrated SAP ERP and Oracle Financials with Teradata EDW</li>
-                <li>Developed ML models for gray market detection with 95% accuracy</li>
-                <li>Automated financial reporting workflows reducing processing time by 35%</li>
-                <li>Technologies: Informatica PowerCenter, SAP HANA, Teradata, Python</li>
-            </ul>
+            <div class="project-card">
+                <h3>Cisco Financial Analytics (TechMahindra)</h3>
+                <p><em>Fair Market Value Analysis System</em></p>
+                <ul>
+                    <li>Integrated SAP/Oracle sources with Teradata EDW</li>
+                    <li>Developed anomaly detection models for gray market analysis</li>
+                    <li>Automated financial reporting workflows</li>
+                </ul>
+                <div class="skill-pill">Informatica PC</div>
+                <div class="skill-pill">Teradata</div>
+                <div class="skill-pill">SAP HANA</div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section style="background: var(--tech-grey); padding: 2rem;">
-        <h3>Core Competencies</h3>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <span style="background: var(--bmw-innovation-blue); padding: 0.5rem; border-radius: 4px;">Informatica PowerCenter</span>
-            <span style="background: var(--dynamic-red); padding: 0.5rem; border-radius: 4px;">Snowflake Cloud DW</span>
-            <span style="background: var(--premium-silver); padding: 0.5rem; border-radius: 4px;">Azure Data Factory</span>
-            <span style="background: var(--bmw-innovation-blue); padding: 0.5rem; border-radius: 4px;">Oracle PL/SQL</span>
+    <section class="container">
+        <div class="section-card">
+            <h2 style="color: var(--informatica-blue)">Technical Expertise</h2>
+            <div class="skill-pill">Informatica PowerCenter</div>
+            <div class="skill-pill">Informatica IDMC</div>
+            <div class="skill-pill">Snowflake Cloud DW</div>
+            <div class="skill-pill">Oracle PL/SQL</div>
+            <div class="skill-pill">Azure Data Factory</div>
+            <div class="skill-pill">Python</div>
+            <div class="skill-pill">Apache Spark</div>
+            <div class="skill-pill">Power BI</div>
+            <div class="skill-pill">Cloud FinOps</div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <footer style="background: var(--carbon-black); padding: 2rem; text-align: center;">
-        <p>Contact: divyaanalytics1@gmail.com | Munich, Germany</p>
-        <div>
-            <a href="#" style="color: var(--premium-silver); margin: 0 1rem;">LinkedIn</a>
-            <a href="#" style="color: var(--premium-silver); margin: 0 1rem;">GitHub</a>
+    <!-- Contact Form -->
+    <section class="container">
+        <div class="section-card">
+            <h2 style="color: var(--informatica-blue)">Contact</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-    </footer>
+    </section>
+
+    <!-- Tech Blog -->
+    <section class="container">
+        <div class="section-card">
+            <h2 style="color: var(--informatica-blue)">Tech Blog</h2>
+            <div class="tech-blog">
+                <div class="blog-post">
+                    <h3>Modernizing PowerCenter Workflows</h3>
+                    <p>Best practices for cloud migration of legacy ETL processes...</p>
+                    <a href="#" style="color: var(--informatica-orange)">Read More →</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Snowflake Cost Optimization</h3>
+                    <p>Implementing FinOps strategies in cloud data warehouses...</p>
+                    <a href="#" style="color: var(--informatica-orange)">Read More →</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Data Governance in Hybrid Clouds</h3>
+                    <p>Managing multi-cloud data integration challenges...</p>
+                    <a href="#" style="color: var(--informatica-orange)">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
