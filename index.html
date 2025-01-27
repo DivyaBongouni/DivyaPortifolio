@@ -3,179 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divya Bongouni | Senior Data Integration Engineer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Divya Bongouni | Senior Data Analyst</title>
     <style>
         :root {
-            --primary-color: #2A5D84;
-            --secondary-color: #5B8FB9;
+            --primary-color: #2A5C82;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFC107;
         }
-        .hero-section {
-            background: linear-gradient(rgba(42,93,132,0.9), rgba(42,93,132,0.8)),
-                        url('data-warehouse-bg.jpg');
-            background-size: cover;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
-        .skill-badge {
-            background: var(--secondary-color);
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: var(--primary-color);
             color: white;
+            padding: 2rem 0;
+            text-align: center;
         }
-        .client-logo {
-            height: 60px;
-            filter: grayscale(100%);
-            transition: all 0.3s;
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
-        .client-logo:hover {
-            filter: grayscale(0%);
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        nav {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            padding: 50px 0;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Divya Bongouni</h1>
+            <p>Senior Data Analyst | Cloud Data Expert | BI Specialist</p>
+        </div>
+    </header>
 
-<!-- Navigation -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Divya Bongouni</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <nav>
+        <div class="container">
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="projects" class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Cloud Modernization: Oracle to Snowflake</h3>
+                <p><strong>Client:</strong> Confidential | <strong>Tools:</strong> Informatica IDMC</p>
+                <ul>
+                    <li>Migrated legacy Oracle system to Snowflake ODS</li>
+                    <li>Implemented cloud-native ETL pipelines</li>
+                    <li>Achieved 40% performance improvement</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Dell Cloud Integration</h3>
+                <p><strong>Client:</strong> Dell @ UST Global | <strong>Tools:</strong> Informatica Cloud</p>
+                <ul>
+                    <li>Oracle to Snowflake data pipeline optimization</li>
+                    <li>Developed real-time monitoring dashboards</li>
+                    <li>Reduced ETL runtime by 35%</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Cisco Data Warehouse</h3>
+                <p><strong>Client:</strong> Cisco @ TechMahindra | <strong>Tools:</strong> Informatica PowerCenter</p>
+                <ul>
+                    <li>Oracle to Teradata migration</li>
+                    <li>Implemented advanced data validation framework</li>
+                    <li>Improved data accuracy by 25%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="container">
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+            <h3>Crayon Deutschland GmbH | Senior Data Analyst (2021-Present)</h3>
+            <ul>
+                <li>Cloud cost optimization using Azure Cost Management</li>
+                <li>Developed automated ETL pipelines with Azure Data Factory</li>
+                <li>Created interactive Power BI dashboards</li>
             </ul>
         </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero-section text-white py-5">
-    <div class="container text-center">
-        <img src="profile.jpg" alt="Profile" class="rounded-circle mb-3" style="width: 150px;">
-        <h1>Divya Bongouni</h1>
-        <h2>Senior DevOps Data Integration Engineer</h2>
-        <p class="lead">13+ years experience in cloud data integration, ETL optimization, and enterprise data solutions</p>
-    </div>
-</section>
-
-<!-- Key Projects -->
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-5">Featured Projects</h2>
         
-        <!-- Cisco Project -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="cisco-logo.png" alt="Cisco" class="client-logo mb-3">
-                        <h5>Data Warehouse Optimization</h5>
-                        <span class="badge skill-badge">Informatica PowerCenter</span>
-                        <span class="badge skill-badge">Teradata</span>
-                        <span class="badge skill-badge">Oracle</span>
-                    </div>
-                    <div class="col-md-8">
-                        <ul>
-                            <li>Developed ETL pipelines processing 1M+ daily transactions</li>
-                            <li>Optimized Teradata queries reducing runtime by 40%</li>
-                            <li>Implemented CDC patterns for real-time data synchronization</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="experience-item">
+            <h3>UST Global | Senior Systems Analyst (2020-2021)</h3>
+            <ul>
+                <li>Supply chain analytics implementation</li>
+                <li>End-to-end data solution development</li>
+                <li>Cross-functional BI collaboration</li>
+            </ul>
         </div>
+    </section>
 
-        <!-- Dell Cloud Migration -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="dell-logo.png" alt="Dell" class="client-logo mb-3">
-                        <h5>Cloud Data Migration</h5>
-                        <span class="badge skill-badge">Informatica Cloud</span>
-                        <span class="badge skill-badge">Snowflake</span>
-                        <span class="badge skill-badge">Oracle</span>
-                    </div>
-                    <div class="col-md-8">
-                        <ul>
-                            <li>Migrated 50TB+ legacy data to Snowflake cloud warehouse</li>
-                            <li>Automated CI/CD pipelines using GitHub Actions</li>
-                            <li>Implemented data quality framework reducing errors by 35%</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <section id="skills" class="container">
+        <h2>Technical Expertise</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Informatica PowerCenter</span>
+            <span class="skill-tag">Informatica IDMC</span>
+            <span class="skill-tag">Azure Data Factory</span>
+            <span class="skill-tag">Snowflake</span>
+            <span class="skill-tag">Oracle</span>
+            <span class="skill-tag">Teradata</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Cloud FinOps</span>
         </div>
+    </section>
 
-        <!-- Crayon FinOps -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="crayon-logo.png" alt="Crayon" class="client-logo mb-3">
-                        <h5>Cloud Cost Optimization</h5>
-                        <span class="badge skill-badge">Informatica IDMC</span>
-                        <span class="badge skill-badge">Snowflake</span>
-                        <span class="badge skill-badge">Azure</span>
-                    </div>
-                    <div class="col-md-8">
-                        <ul>
-                            <li>Developed automated cost reporting saving 200+ hours/month</li>
-                            <li>Created predictive models for cloud spend forecasting</li>
-                            <li>Integrated IDMC with Snowflake for real-time analytics</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>📧 divyaanalytics1@gmail.com<br>
+           📱 +49 152 18982797<br>
+           🌍 Munich, Germany<br>
+           🔗 linkedin.com/in/divya-bongouni-18892717</p>
+    </section>
 
-<!-- Technical Expertise -->
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Technical Expertise</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <h5>Data Integration</h5>
-                <ul class="list-unstyled">
-                    <li>Informatica PowerCenter/IDMC</li>
-                    <li>Azure Data Factory</li>
-                    <li>Apache Airflow</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h5>Cloud Platforms</h5>
-                <ul class="list-unstyled">
-                    <li>AWS/Azure/GCP</li>
-                    <li>Snowflake</li>
-                    <li>Databricks</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h5>DevOps</h5>
-                <ul class="list-unstyled">
-                    <li>GitHub Actions</li>
-                    <li>Docker</li>
-                    <li>Terraform</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <p>Connect with me: 
-            <a href="#" class="text-white">LinkedIn</a> |
-            <a href="#" class="text-white">GitHub</a>
-        </p>
-        <p>© 2023 Divya Bongouni. All rights reserved.</p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer style="background: var(--primary-color); color: white; text-align: center; padding: 1rem;">
+        <p>© 2023 Divya Bongouni | Senior Data Analyst</p>
+    </footer>
 </body>
 </html>
