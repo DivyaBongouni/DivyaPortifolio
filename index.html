@@ -3,327 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divya Bongouni | Senior Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Divya Bongouni | Senior Data Integration Specialist</title>
     <style>
         :root {
-            --primary-color: #2A5C82;
-            --secondary-color: #4CAF50;
-            --accent-color: #FFC107;
-            --text-color: #333;
-            --light-bg: #f9f9f9;
+            --bmw-innovation-blue: #0066B3;
+            --premium-silver: #C0C0C0;
+            --dynamic-red: #CC0000;
+            --carbon-black: #1A1A1A;
+            --tech-grey: #4D4D4D;
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: var(--carbon-black);
+            color: #ffffff;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), #1a3a57);
-            color: white;
-            padding: 6rem 0 4rem;
+        .hero-section {
+            background: linear-gradient(135deg, var(--bmw-innovation-blue) 0%, var(--tech-grey) 100%);
+            padding: 4rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-header {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin: 2rem auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            border-bottom: 3px solid var(--dynamic-red);
         }
 
         .project-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            padding: 30px;
-            border-radius: 12px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--premium-silver);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            transition: transform 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .skill-badge {
-            display: inline-block;
-            background: var(--light-bg);
-            padding: 8px 20px;
-            border-radius: 20px;
-            margin: 5px;
-            font-size: 0.9em;
-            border: 1px solid #e0e0e0;
-        }
-
-        nav {
-            background: white;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-            font-size: 2.5em;
-            color: var(--primary-color);
-        }
-
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--accent-color);
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .experience-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            padding-left: 30px;
-            border-left: 3px solid var(--primary-color);
-        }
-
-        .experience-item {
-            background: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            position: relative;
-        }
-
-        .experience-item::before {
-            content: '';
-            width: 15px;
-            height: 15px;
-            background: var(--primary-color);
-            border: 3px solid white;
-            border-radius: 50%;
-            position: absolute;
-            left: -39px;
-            top: 30px;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-icon {
-            font-size: 2em;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: white;
-            margin: 0 15px;
-            font-size: 1.5em;
-            transition: opacity 0.3s;
-        }
-
-        .social-links a:hover {
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            nav .container {
-                flex-direction: column;
-            }
-            
-            nav a {
-                margin: 10px 0;
-            }
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,102,179,0.3);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container profile-header">
-            <img src="profile-placeholder.jpg" alt="Divya Bongouni" class="profile-photo">
-            <h1>Divya Bongouni</h1>
-            <p style="font-size: 1.4em; margin-top: 1rem;">Senior Data Analyst | Cloud Data Expert | BI Specialist</p>
-            <div style="margin-top: 2rem;">
-                <a href="#contact" style="background: var(--secondary-color); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none;">Contact Me</a>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Divya Bongouni</h1>
+        <h2>Senior Data Integration Specialist</h2>
+        <p>Driving Digital Transformation through Cloud Data Modernization</p>
+    </section>
+
+    <!-- Project Section -->
+    <section class="container">
+        <!-- Crayon Project -->
+        <div class="project-card">
+            <h3 style="color: var(--dynamic-red)">Crayon Deutschland GmbH</h3>
+            <h4>Informatica CDI-PC Modernization Project</h4>
+            <ul>
+                <li>Modernized legacy PowerCenter workflows to cloud-native Informatica IDMC</li>
+                <li>Migrated Oracle ERP data to Snowflake ODS with 40% performance improvement:cite[1]</li>
+                <li>Implemented real-time data validation framework using Python & SQL</li>
+                <li>Technologies: Informatica IDMC, Oracle 19c, Snowflake, Azure Data Factory</li>
+            </ul>
         </div>
-    </header>
 
-    <nav>
-        <div class="container">
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+        <!-- Dell Client Project -->
+        <div class="project-card">
+            <h3 style="color: var(--premium-silver)">Dell Supply Chain Analytics (UST Global)</h3>
+            <h4>Supply Chain Workflow Automation</h4>
+            <ul>
+                <li>Designed ETL pipelines for global supply chain data using Informatica Cloud</li>
+                <li>Integrated Oracle EBS with Snowflake data lake handling 5TB daily:cite[2]:cite[5]</li>
+                <li>Developed predictive analytics models for inventory optimization</li>
+                <li>Technologies: Informatica Cloud, Oracle EBS, Snowflake, Power BI</li>
+            </ul>
         </div>
-    </nav>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <!-- Project Cards with enhanced design -->
-                <div class="project-card">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <i class="fas fa-cloud-upload-alt" style="font-size: 1.5em; color: var(--primary-color); margin-right: 10px;"></i>
-                        <h3 style="margin: 0;">Cloud Modernization</h3>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <span class="skill-badge">Informatica IDMC</span>
-                        <span class="skill-badge">Snowflake</span>
-                        <span class="skill-badge">Oracle</span>
-                    </div>
-                    <ul style="list-style-type: none; padding-left: 20px;">
-                        <li style="margin-bottom: 10px;">✓ Migrated legacy Oracle system to Snowflake ODS</li>
-                        <li style="margin-bottom: 10px;">✓ Implemented cloud-native ETL pipelines</li>
-                        <li style="margin-bottom: 10px;">✓ Achieved 40% performance improvement</li>
-                    </ul>
-                </div>
-
-                <!-- Repeat similar structure for other projects -->
-            </div>
+        <!-- Cisco Financial Services Project -->
+        <div class="project-card">
+            <h3 style="color: var(--bmw-innovation-blue)">Cisco Financial Analytics (TechMahindra)</h3>
+            <h4>Fair Value Market & Gray Market Analysis</h4>
+            <ul>
+                <li>Integrated SAP ERP and Oracle Financials with Teradata EDW</li>
+                <li>Developed ML models for gray market detection with 95% accuracy</li>
+                <li>Automated financial reporting workflows reducing processing time by 35%</li>
+                <li>Technologies: Informatica PowerCenter, SAP HANA, Teradata, Python</li>
+            </ul>
         </div>
     </section>
 
-    <section id="experience" style="background: var(--light-bg);">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <!-- Enhanced Experience Timeline Items -->
-                <div class="experience-item">
-                    <h3>Crayon Deutschland GmbH</h3>
-                    <p class="text-muted">Senior Data Analyst | 2021 - Present</p>
-                    <ul>
-                        <li>Cloud cost optimization using Azure Cost Management</li>
-                        <li>Developed automated ETL pipelines with Azure Data Factory</li>
-                        <li>Created interactive Power BI dashboards</li>
-                    </ul>
-                </div>
-                <!-- Add other experience items -->
-            </div>
+    <!-- Skills Section -->
+    <section style="background: var(--tech-grey); padding: 2rem;">
+        <h3>Core Competencies</h3>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <span style="background: var(--bmw-innovation-blue); padding: 0.5rem; border-radius: 4px;">Informatica PowerCenter</span>
+            <span style="background: var(--dynamic-red); padding: 0.5rem; border-radius: 4px;">Snowflake Cloud DW</span>
+            <span style="background: var(--premium-silver); padding: 0.5rem; border-radius: 4px;">Azure Data Factory</span>
+            <span style="background: var(--bmw-innovation-blue); padding: 0.5rem; border-radius: 4px;">Oracle PL/SQL</span>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <!-- Skill Progress Bars -->
-                <div style="background: white; padding: 20px; border-radius: 8px;">
-                    <h4>Informatica PowerCenter</h4>
-                    <div style="height: 8px; background: #eee; border-radius: 4px; margin-top: 10px;">
-                        <div style="width: 95%; height: 100%; background: var(--primary-color); border-radius: 4px;"></div>
-                    </div>
-                </div>
-                <!-- Add other skills -->
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="background: var(--light-bg);">
-        <div class="container">
-            <div class="contact-card">
-                <i class="fas fa-envelope contact-icon"></i>
-                <h2>Let's Connect</h2>
-                <p>📧 divyaanalytics1@gmail.com<br>
-                   📱 +49 152 18982797<br>
-                   🌍 Munich, Germany</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2023 Divya Bongouni | Senior Data Analyst</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-xing"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
+    <!-- Contact Section -->
+    <footer style="background: var(--carbon-black); padding: 2rem; text-align: center;">
+        <p>Contact: divyaanalytics1@gmail.com | Munich, Germany</p>
+        <div>
+            <a href="#" style="color: var(--premium-silver); margin: 0 1rem;">LinkedIn</a>
+            <a href="#" style="color: var(--premium-silver); margin: 0 1rem;">GitHub</a>
         </div>
     </footer>
 </body>
