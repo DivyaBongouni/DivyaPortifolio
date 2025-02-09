@@ -207,11 +207,13 @@
     </section>
 
 <section id="contact" class="container"> 
+    <h2>Contact Me</h2>
     <p><b>Contact me @</b> <br> <b>Email address:</b> divyaanalytics1@gmail.com</p>
     <hr>
     <h3>Send me a Message:</h3>
     <form action="https://formsubmit.co/divyaanalytics1@gmail.com" method="POST">
-        <input type="hidden" name="_redirect" value="https://divyabongouni.github.io/DivyaPortifolio/">
+        <!-- Use FormSubmit's "_next" to specify the redirect URL after successful submission -->
+        <input type="hidden" name="_next" value="https://divyabongouni.github.io/DivyaPortifolio/">
         
         <label for="name"><b>Name:</b></label>
         <input type="text" id="name" name="name" required><br><br>
@@ -222,7 +224,7 @@
         <label for="message"><b>Message:</b></label><br>
         <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
     </form>
 </section>
 
