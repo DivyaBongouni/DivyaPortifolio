@@ -23,217 +23,97 @@
         .header {
             background: var(--informatica-blue);
             color: white;
-            padding: 3rem 0;
+            padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background: var(--informatica-light-blue);
+            padding: 1rem;
+        }
+
+        .nav-tabs a {
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: var(--informatica-blue);
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-tabs a:hover, .nav-tabs a.active {
+            background: var(--informatica-blue);
+            color: white;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            display: none;
         }
 
-        .section-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #E5E5E5;
-        }
-
-        .project-card {
-            border-left: 4px solid var(--informatica-orange);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            background: #FFF;
-        }
-
-        .skill-pill {
-            display: inline-block;
-            background: var(--informatica-light-blue);
-            color: var(--informatica-blue);
-            padding: 0.5rem 1rem;
-            margin: 0.25rem;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-
-        .contact-form {
-            display: grid;
-            grid-gap: 1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        input, textarea {
-            padding: 0.8rem;
-            border: 1px solid #DDD;
-            border-radius: 4px;
-            width: 100%;
-        }
-
-        button {
-            background: var(--informatica-blue);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: var(--informatica-orange);
-        }
-
-        .tech-blog {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-post {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #EEE;
+        .active-content {
+            display: block;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1>Divya Bongouni</h1>
-            <h2>Senior Data Engineer</h2>
-            <p>Over 10+ Years Experience in Data Integration,Analysis & Reporting</p>
-        </div>
+        <h1>Divya Bongouni</h1>
+        <h2>Senior Data Engineer</h2>
     </header>
 
-    <!-- Projects Section -->
-    <section class="container">
-        <div class="section-card">
-            <h2 style="color: var(--informatica-blue)">Key Projects</h2>
-            
-            <div class="project-card">
-                <h3>Crayon Deutschland GmbH</h3>
-                <p><em>Informatica CDI-PC Modernization</em></p>
-                <ul>
-                  <li>Data architecture & strategy:Led cloud migrations using Azure, AWS & Informatica IDMC, extracted data from various source systems including Oracle and migrated it to Target systems including Azure SQL,Snowflake. Erwin is used for data modeling.</li>
-                  <li>Data integration & reporting:Built ETL pipelines using Azure Data Factory, Informatica IDMC & Python, optimized data flows, lineage & increased reporting efficiency by 40-50%.</li>
-                  <li>CI/CD & DevOps:Automated data pipelines with CI/CD & DevOps best practices for increased efficiency & scalability in Agile Environment.</li>
-                  <li>Cloud costs & performance:Azure & AWS Cloud platforms optimized with FinOps to improve cost efficiency & processing speed.</li>
-                  <li>Data Governance & Quality:Informatica CDGC, RDM, MDM & data harmonization implemented for structured & unstructured data governance.</li>
-                  <li>SQL & Data Analytics:SQL & PLSQL queries developed for large-scale data analytics & business data modeling (BDM).</li>
-                  <li>Stakeholder Management & BI:Utilized Power BI & Tableau, created RDM,BRD for requirement documentation and specifications & collaborated with stakeholders for impactful BI & Analytics.</li>
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <a href="#" class="tab-link active" data-tab="home">Home</a>
+        <a href="#" class="tab-link" data-tab="cv">CV</a>
+        <a href="#" class="tab-link" data-tab="projects">Projects</a>
+        <a href="#" class="tab-link" data-tab="contact">Contact</a>
+    </nav>
 
-
-                </ul>
-                <div class="skill-pill">Informatica IDMC</div>
-				<div class="skill-pill">Azure Data Platform</div>
-				<div class="skill-pill">AWS</div>
-                <div class="skill-pill">Snowflake</div>
-                <div class="skill-pill">Oracle</div>
-				<div class="skill-pill">CI/CD</div>
-				<div class="skill-pill">Agile DEVOPS</div>
-				<div class="skill-pill">Requirement Specifications</div>
-            </div>
-
-            <div class="project-card">
-                <h3>Dell Supply Chain Analytics (UST Global)</h3>
-                <p><em>Supply Chain Workflow Automation</em></p>
-                <ul>
-                    <li>Worked on the end-to-end development process from stakeholder requirements gathering and technical documentation to data modeling and development of KPIs and dashboards using Power BI.</li>
-                    <li>ETL and Data Integration : Developed ETL processes using Informatica PowerCenter and Azure Data Factory to ensure smooth data flow for supply chain performance analysis.</li>
-                    <li>Data Modeling and Reporting : Utilized Erwin for Datamodelling and built the Power BI dashboards and SQL-based KPI tracking solutions with a focus on supply chain segmentation and predictive analytics.</li>
-                    <li>Worked with Azure Data platforms and Oracle ,Teradata,Snowflake databases for data integration and optimization, improving reporting workflows and efficiency.</li>
-                    <li>Agile Methodology : Participated in agile teams to ensure successful delivery of BI solutions through iterative cycles.</li>
-                    <li>Collaboration with DevOps teams : Worked closely with DevOps teams to ensure seamless integration of data pipelines, optimize cloud infrastructure and automate workflows, improving overall system performance and scalability.</li>
-                    <li>Translated business requirements into detailed technical documentation and actionable insights for stakeholders.</li>
-
-                </ul>
-                <div class="skill-pill">Informatica powercenter,Cloud</div>
-                <div class="skill-pill">Oracle,Teradata</div>
-                <div class="skill-pill">SQL,PLSQL</div>
-				<div class="skill-pill">Requirement Specification,stakeholder Management</div>
-				<div class="skill-pill">Agile Devops-CICD</div>
-            </div>
-
-            <div class="project-card">
-                <h3>Cisco Financial Analytics (TechMahindra)</h3>
-                <p><em>Fair Market Value Analysis System,Balance Score card Metrics</em></p>
-                <ul>
-                    <li>Integrated SAP/Oracle sources with Teradata EDW</li>
-					<li>Experienced in requirement gathering ,data integration,analysis and data presentation to business users.</li>
-                    <li>Prepared and Managed documents of RDM and BRD,HDD and LDD for project requirement specifications, change request management specifications.</li>
-                    <li>ETL Development : Developed and optimized ETL mappings, sessions and workflows using Informatica PowerCenter , loading data into Teradata Data warehouse while adhering to industry best practices.</li>
-                    <li>Integrated and processed large amounts of data from various source systems including Oracle to target system Teradata DWH to ensure optimal performance and accurate reporting.</li>
-                    <li>Reporting : Created interactive dashboards and KPIs with Tableau and Power BI to provide business partners with valuable insights into key performance metrics.</li>
-                    <li>Performance Optimization : Performed optimization and tuning of complex SQL,PLSQL queries for high performance data processing.</li>
-                    <li>Experienced in Githut,Artifacts Version control, Agile and Scrum Methodologies.</li>
-                    <li>Collaborated with cross functional and technical departments, stakeholders.</li>
-                    <li>Developed anomaly detection models for gray market analysis</li>
-                    <li>Automated financial reporting workflows</li>
-                </ul>
-                <div class="skill-pill">Informatica PC</div>
-                <div class="skill-pill">Teradata</div>
-                <div class="skill-pill">SAP HANA,Oracle</div>
-            </div>
-        </div>
+    <!-- Tab Content Sections -->
+    <section id="home" class="container active-content">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This is my personal portfolio showcasing my work and expertise in data engineering.</p>
     </section>
 
-    <!-- Skills Section -->
-    <section class="container">
-        <div class="section-card">
-            <h2 style="color: var(--informatica-blue)">Technical Expertise</h2>
-            <div class="skill-pill">Informatica PowerCenter</div>
-            <div class="skill-pill">Informatica IDMC</div>
-            <div class="skill-pill">Snowflake Cloud DW</div>
-            <div class="skill-pill">Oracle PL/SQL</div>
-            <div class="skill-pill">Azure Data Factory</div>
-            <div class="skill-pill">Python</div>
-            <div class="skill-pill">Apache Spark</div>
-            <div class="skill-pill">Power BI</div>
-            <div class="skill-pill">Cloud FinOps</div>
-        </div>
+    <section id="cv" class="container">
+        <h2>Curriculum Vitae</h2>
+        <p>Over 10+ years of experience in Data Engineering...</p>
+        <!-- Add the rest of your CV content here -->
     </section>
 
-    <!-- Contact Form -->
-    <section class="container">
-        <div class="section-card">
-            <h2 style="color: var(--informatica-blue)">Contact</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea rows="5" placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <section id="projects" class="container">
+        <h2>Key Projects</h2>
+        <p>List of major projects...</p>
     </section>
 
-    <!-- Tech Blog -->
-    <section class="container">
-        <div class="section-card">
-            <h2 style="color: var(--informatica-blue)">Tech Blog</h2>
-            <div class="tech-blog">
-                <div class="blog-post">
-                    <h3>Modernizing PowerCenter Workflows</h3>
-                    <p>Best practices for cloud migration of legacy ETL processes...</p>
-                    <a href="#" style="color: var(--informatica-orange)">Read More →</a>
-                </div>
-                <div class="blog-post">
-                    <h3>Snowflake Cost Optimization</h3>
-                    <p>Implementing FinOps strategies in cloud data warehouses...</p>
-                    <a href="#" style="color: var(--informatica-orange)">Read More →</a>
-                </div>
-                <div class="blog-post">
-                    <h3>Data Governance in Hybrid Clouds</h3>
-                    <p>Managing multi-cloud data integration challenges...</p>
-                    <a href="#" style="color: var(--informatica-orange)">Read More →</a>
-                </div>
-            </div>
-        </div>
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>Get in touch via email or LinkedIn...</p>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tabs = document.querySelectorAll(".tab-link");
+            const sections = document.querySelectorAll(".container");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function(event) {
+                    event.preventDefault();
+
+                    tabs.forEach(t => t.classList.remove("active"));
+                    sections.forEach(s => s.classList.remove("active-content"));
+
+                    this.classList.add("active");
+                    document.getElementById(this.dataset.tab).classList.add("active-content");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
